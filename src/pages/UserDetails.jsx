@@ -14,9 +14,9 @@ fetch(`https://reqres.in/api/users/${id}`)
 .catch(()=>setError(true))
 .finally(()=>setLoding(false))
 },[])
-    return loding ? ( <div>Loding...</div> ) : error ? ( <div>Somthing Went Wrong</div> ) : ( <div>
-        <img src={user.avatar} alt="profile" />
-        <h4>UserName : {user.first_name}{" "}{user.last_name}</h4>
-        <h4>UserEmail : {user.email}</h4>
-        </div> )
+return loding ? ( <div>Loding...</div> ) : error ? ( <div>Somthing Went Wrong</div> ) : ( <div>
+    <img src={user.avatar} alt="profile" />
+    <h4>UserName : {user.first_name}{" "}{user.last_name}</h4>
+    <h4>UserEmail : {user.email}</h4>
+    </div> )
 }
